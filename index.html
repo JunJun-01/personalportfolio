@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>My Website</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1>JUN's <span>PORTFOLIO</span></h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#skill" data-after="Skills">Skills</a></li>
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello World, <span></span></h1>
+        <h1>My Name is <span></span></h1>
+        <h1>JUN <span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+  <!-- Service Section -->
+  
+  <!-- End Service Section -->
+
+  <section id="skill">
+    <div class="skill-header">
+      <h1 class="section-title">Skills</h1>
+    </div>
+    <div class="skill-bars">
+      <div class="bar">
+        <div class="info">
+          <span>HTML</span>
+        </div>
+        <div class="progress-line html">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>CSS</span>
+        </div>
+        <div class="progress-line css">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>jQuery</span>
+        </div>
+        <div class="progress-line jquery">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>Python</span>
+        </div>
+        <div class="progress-line python">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>MySQL</span>
+        </div>
+        <div class="progress-line mysql">
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="certification-header">
+      <h1 class="section-title">Certification</h1>
+    </div>
+    <div class="wrapper">
+      <div class="card">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">HTML & CSS</div>
+      </div>
+      <div class="card js">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">JavaScript</div>
+      </div>
+      <div class="card react">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">Python</div>
+      </div>
+  </div>
+  <script>
+      let options = {
+        startAngle: -1.55,
+        size: 150,
+        value: 0.85,
+        fill: {gradient: ['#a445b2', '#fa4299']}
+      }
+      $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+      function(event, progress, stepValue){
+        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+      });
+      $(".js .bar").circleProgress({
+        value: 0.70
+      });
+      $(".react .bar").circleProgress({
+        value: 0.80
+      });
+  </script>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Recent Projects</h1>
+      </div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Voice_Assistant.py</h1>
+            <p>BAYMAX is a voice commanding assistant service in Python 3.9+. It execute commands based on human speech and replies to users.<br>
+
+              Features available vers. 1.0<br>
+              
+              - SIMPLE INTRODUCTION to the voice assistant (e.g 'who are you')<br>
+              - tell current time (e.g 'time')<br>
+              - search information through Google.com search engine (e.g 'Google')<br>
+              - find places with google.mp (e.g 'locate')<br>
+              - exit command (e.g 'exit')<br>
+            </p>
+          </div>
+          <div class="project-img">
+            <img src="images/baymax.jpg" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Car_booking_system.py</h1>
+            <p>Online Car Rental booking services by allowing customers to book cars for rent, online. Have 3 type of users and contains features stated below that each function differs between different users.<br>
+              <h2>Functionalities of Admin</h2><br>
+              i. Login to Access System.<br>
+              ii. Add Cars to be rented out. and etc.<br>
+              <h2>Functionalities of All Customers (Registered / Not-Registered)</h2><br>
+              i. View all cars available for rent.<br>
+              ii. New customer Register to Access other Details. and etc.<br>
+              <h2>Functionalities of Registered Customer</h2><br>
+              i. Login to Access System.<br>
+              ii. Modify Personal Details. and etc.<br>
+            </p>
+          </div>
+          <div class="project-img">
+            <img src="images/carbookingsystem.jpg" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Snake_Game.py</h1>
+            <p>Classic Snake Game that can be done under 10 minutes with the help fo import window_curser with python. Functions available in this simple snake game:<br>
+
+              - Moving Snake<br>
+              - Food available<br>
+              - Movements control with key up, down, left, right.<br>
+              - Length of the snake increases as more food is engulfed.<br>
+              - Border box available<br>
+              - Snake contact each other would cause GAME OVER.</p>
+          </div>
+          <div class="project-img">
+            <img src="images/snakegame.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 4</h1>
+            <p>
+
+            </p>
+          </div>
+          <div class="project-img">
+            <img src="images/logo.jpg" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 5</h1>
+            <p>
+
+            </p>
+          </div>
+          <div class="project-img">
+            <img src="images/logo.jpg" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Projects Section -->
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-header">
+      <h1 class="section-title">About</h1>
+    </div>
+    <div class="about-bottom">
+      <div class = "about-wrapper">
+        <div class = "about-left">
+          <div class = "about-left-content">
+            <div>
+              <div class = "shadow">
+                <div class = "about-img">
+                  <img src = "images/logo.jpg" alt = "about image">
+                </div>
+              </div>
+    
+              <h2>Jun</h2>
+              <h3>SOFTWARE ENGINEER</h3>
+            </div>
+    
+            <ul class = "icons">
+              <li><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></li>
+              <li><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></li>
+              <li><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></li>
+              <li><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class = "about-right">
+          <h1>hi<span>!</span></h1>
+          <h2>Here's about me :)</h2>
+          <div class = "about-btns">
+            <a href="" type = "button" class = "btn btn-pink">resume</a>
+            <a href="#projects" type = "button" class = "btn btn-white">projects</a>
+          </div>
+    
+          <div class = "about-para">
+            <p>Candidate at Asia Pacific University for a diploma in software engineering who is pursuing an internship (May-July) in IT field. Strive to explore new stuff, interested in business, project management. Experienced with cross-cultural teamwork while involved in different workshops, events, startups.</p>
+            <p>Contact me for more information :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+  
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div class="contact-header">
+        <h1 class="section-title">Contact</h1>
+      </div>
+    <form action="">
+      <div class="title">
+        <h2>CONTACT</h2>
+      </div>
+      <div class="half">
+        <div class="item">
+          <label for="name">NAME</label>
+          <input type="text" id = "name">
+        </div>
+        <div class="item">
+          <label for="email">EMAIL</label>
+          <input type="text" id = "email">
+        </div>
+      </div>
+      <div class="full">
+        <label for="message">MESSAGE</label>
+        <textarea name="" id = "message"></textarea>
+      </div>
+      <div class="action">
+        <input type="submit" value = "SEND MESSAGE">
+        <input type="reset" value = "RESET">
+      </div>
+    </form>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1>JUN's <span>PORTFOLIO</span></h1>
+      </div>
+      <h2>Web design portfolio from scratch.</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+        </div>
+      </div>
+      <p>Copyright © 2020 Jun. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+
+</html>
