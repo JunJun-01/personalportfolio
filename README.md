@@ -8,3 +8,7 @@
 ![image](https://user-images.githubusercontent.com/74132232/156017026-c25f19e9-c310-42d3-a45d-01b9eb1149b6.png)
 ![image](https://user-images.githubusercontent.com/74132232/156017070-a13ad2f1-e1c7-446a-84f5-081e0e282c40.png)
 
+Responsive
+![image](https://user-images.githubusercontent.com/74132232/156017416-2a62f235-4b3b-4420-9fdb-f8ab506fc31d.png)
+![image](https://user-images.githubusercontent.com/74132232/156017545-e54d13ea-b8d0-4374-93a3-243c30dfa3b4.png)
+![image](https://user-images.githubusercontent.com/74132232/156017481-4feb08c6-012d-4a37-9c23-7df97fd9b060.png)
